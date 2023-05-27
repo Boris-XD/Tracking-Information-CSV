@@ -1,10 +1,20 @@
-﻿namespace Tracking.Information.Register
+﻿using Microsoft.Extensions.DependencyInjection;
+using Solisystems.ProductRegistry.Register.Configurations;
+using Tracking.Information.Register.Services;
+
+namespace Tracking.Information.Register
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var serviceProvider = new ServiceCollection()
+                  .AddBusinessService()
+                  .AddDataServices()
+                  .BuildServiceProvider();
+
+            var demoService = serviceProvider.GetRequiredService<IReadDataService>();
+            await demoService.SaveDataFromCSV();
         }
     }
 }

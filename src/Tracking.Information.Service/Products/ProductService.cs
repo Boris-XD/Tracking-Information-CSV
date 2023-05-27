@@ -1,4 +1,4 @@
-﻿using Solisystems.ProductRegistry.Repositories.Products;
+﻿using Tracking.Information.Repository.Products;
 
 namespace Tracking.Information.Service.Products
 {

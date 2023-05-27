@@ -6,7 +6,7 @@ namespace Tracking.Information.Repository.Data
 {
     public class ProductRegistryDbContext : DbContext
     {
-        private const string connectionString = @"Server=127.0.0.1;Port=5432;Database=SolisystemsRegister;User Id=postgres;Password=postgres;";
+        private const string connectionString = @"Server=127.0.0.1;Port=5432;Database=TrackingInformation;User Id=postgres;Password=postgres;";
 
         public ProductRegistryDbContext(DbContextOptions<ProductRegistryDbContext> options)
             : base(options)

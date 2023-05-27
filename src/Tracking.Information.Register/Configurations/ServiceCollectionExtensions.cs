@@ -32,7 +32,7 @@ namespace Solisystems.ProductRegistry.Register.Configurations
         {
             services
                 .AddDbContext<ProductRegistryDbContext>(
-                    options => options.UseNpgsql("Server=127.0.0.1;Port=5432;Database=SolisystemsRegister;User Id=postgres;Password=postgres"));
+                    options => options.UseNpgsql("Server=127.0.0.1;Port=5432;Database=TrackingInformation;User Id=postgres;Password=postgres"));
             return services
                 .AddScoped<ICategoryRepository, CategoryRepository>()
                 .AddScoped<IProductRepository, ProductRepository>();
